@@ -8,6 +8,9 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 app.MapGet("/dado/d{numeroFaces}", (int numeroFaces) => {
     if (numeroFaces <= 0)
     {
